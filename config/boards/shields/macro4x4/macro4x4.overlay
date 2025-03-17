@@ -20,7 +20,7 @@
     kscan0: kscan_0  {   // Define the macropad_4x4 node
         compatible = "zmk,kscan-gpio-matrix";  // Compatible property for macropad
         label = "KSCAN";
-        diode-direction = "ROW2COL";
+        diode-direction = "row2col";
 
         row-gpios = <&gpio0 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>, // P0.06
             <&gpio0 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>, // P0.08
