@@ -4,23 +4,23 @@
     };
 };
 
-&pro_micro {  // Change to your actual MCU board
-    compatible = "zmk,keyboard";
-
-    // Enable matrix scanning
-    kscan-matrix {
+&macropad_4x4 {   // Define the macropad_4x4 node
+    compatible = "zmk,macropad-4x4";  // Compatible property for macropad
+    label = "macropad_4x4";
+    
+    matrix {
         compatible = "zmk,kscan-matrix";
         label = "KSCAN";
 
         row-gpios = <&gpio0 6  (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,  // P0.06
-            <&gpio0 8  (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,  // P0.08
-            <&gpio0 17 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,  // P0.17
-            <&gpio0 20 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;  // P0.20 
-            
+                    <&gpio0 8  (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,  // P0.08
+                    <&gpio0 17 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,  // P0.17
+                    <&gpio0 20 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;  // P0.20 
+
         col-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>,  // P0.22
-            <&gpio0 24 GPIO_ACTIVE_LOW>,  // P0.24
-            <&gpio1 0  GPIO_ACTIVE_LOW>,  // P1.00 
-            <&gpio0 11 GPIO_ACTIVE_LOW>;  // P0.11
+                    <&gpio0 24 GPIO_ACTIVE_LOW>,  // P0.24
+                    <&gpio1 0  GPIO_ACTIVE_LOW>,  // P1.00 
+                    <&gpio0 11 GPIO_ACTIVE_LOW>;  // P0.11
 
         diode-direction = "ROW2COL"; 
     };
