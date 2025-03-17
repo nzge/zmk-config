@@ -1,4 +1,5 @@
 if SHIELD_MACRO4x4
+
   config ZMK_KEYBOARD_NAME
     default "macro4x4"
 
